@@ -19,7 +19,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 ## 🚀 How to View
 
-Click [here](https://your-github-username.github.io/Ayushmaan-Portfolio/) to explore my portfolio.
+Click [here](https://ayushmaan16.github.io/Ayushmaan-Portfolio/) to explore my portfolio.
 
 *(Replace the link above with your live GitHub Pages URL once deployed.)*
 
@@ -43,8 +43,8 @@ Feel free to connect with me for collaboration or queries:
 - **Email**: [mr.ayushmaangup@gmail.com](mailto:mr.ayushmaangup@gmail.com)
 - **Phone**: +91 7668777328
 - **Location**: Saharanpur, India
-- **LinkedIn**: [Connect with me](#)
-- **GitHub**: [https://github.com/your-github-username](#)
+- **LinkedIn**: [[Connect with me](https://www.linkedin.com/in/ayushmaan-gupta/)](#)
+- **GitHub**: [https://github.com/ayushmaan16](#)
 - **LeetCode**: [https://leetcode.com/u/ayushmaan1630/](https://leetcode.com/u/ayushmaan1630/)
 
 ---
