@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Ayushmaan Gupta, portfolio, Java Developer, Web Developer, Data Analytics" />
+    <meta name="description" content="Welcome to Ayushmaan Gupta's Portfolio. Java Developer & Web Development enthusiast." />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@latest/font/simple-icons.min.css" />
+    <title>Portfolio | Ayushmaan Gupta</title>
+    <style>
+      /* ── GLOBAL SECTION FIX ── */
+      section {
+        padding: 6rem 9% 4rem;
+      }
+      .heading {
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      /* ── HOME: fix btn hidden behind socials ── */
+      .home {
+        padding-top: 8rem;
+        align-items: center;
+        gap: 2rem;
+      }
+      .home .content {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .home .btn {
+        position: relative;   /* was absolute — caused overlap */
+        display: inline-block;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+      }
+      .socials {
+        margin-top: 2rem;     /* was 9rem */
+        position: relative;
+      }
+
+      /* ── ABOUT: tighten excessive padding ── */
+      .about .row {
+        padding: 2rem 1rem;
+      }
+
+      /* ── SKILLS: ensure grid doesn't overflow ── */
+      .skills .container .row {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      }
+
+      /* ── WORK: View All button always visible ── */
+      .work .viewall {
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      /* ── EXPERIENCE: morebtn spacing ── */
+      .experience .morebtn {
+        margin-top: 3rem;
+        padding-bottom: 2rem;
+      }
+
+      /* ── CERTIFICATES SECTION ── */
+      .certificates {
+        background: #f0f4ff;
+        min-height: auto;
+        padding: 6rem 9% 4rem;
+      }
+      .certificates .heading {
+        font-size: 3.5rem;
+        color: rgb(32, 32, 32);
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .certificates .heading span { color: rgb(115, 3, 167); }
+      .certificates .certs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+      .cert-card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      }
+      .cert-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(37, 6, 173, 0.15);
+        border-color: #2506ad;
+      }
+      .cert-card .cert-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #2506ad;
+      }
+      .cert-card h3 {
+        font-size: 1.4rem;
+        color: #1d3557;
+        margin-bottom: 0.6rem;
+        font-weight: 700;
+        text-transform: none;
+      }
+      .cert-card .cert-issuer {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 0.4rem;
+        text-transform: none;
+      }
+      .cert-card .cert-date {
+        font-size: 1.1rem;
+        color: #2506ad;
+        font-weight: 600;
+        text-transform: none;
+      }
+
+      /* ── CONTACT: fix container overflow on small screens ── */
+      .contact .container {
+        margin: 2rem auto;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      /* ── RESPONSIVE FIXES ── */
+      @media (max-width: 768px) {
+        .home {
+          padding-top: 10rem;
+        }
+        .certificates .certs-grid {
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 1.2rem;
+        }
+        .cert-card { padding: 1.5rem 1rem; }
+        .cert-card h3 { font-size: 1.2rem; }
+      }
+      @media (max-width: 450px) {
+        section { padding: 5rem 4% 3rem; }
+        .certificates { padding: 5rem 4% 3rem; }
+        .certificates .certs-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- ═══ NAVBAR ═══ -->
+<header>
+  <a href="/" class="logo"><i class="fas fa-laptop-code"></i> Ayushmaan</a>
+  <div id="menu" class="fas fa-bars"></div>
+  <nav class="navbar">
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="home" id="home">
+  <div id="particles-js"></div>
+  <div class="content">
+    <h2>Hi There,<br/>I'm <span>Ayushmaan Gupta</span></h2>
+    <p>I am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn">
+      <span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+      <ul class="social-icons">
+        <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ayushmaan-gupta" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="github" aria-label="GitHub" href="https://github.com/ayushmaan16" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a class="leetcode" aria-label="LeetCode" href="https://leetcode.com/u/ayushmaan1630/" target="_blank"><i class="si si-leetcode"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="image">
+    <img draggable="false" class="tilt" src="./assets/gif14.gif" alt="Ayushmaan Gupta">
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+  <div class="row">
+    <div class="image">
+      <img draggable="false" class="tilt" src="./assets/img bg.png" alt="Profile">
+    </div>
+    <div class="content">
+      <h3>I'm Ayushmaan</h3>
+      <span class="tag">Java Developer | Web Developer | Data Analytics Enthusiast</span>
+      <p>I am a passionate Computer Science student at GLA University, Mathura (graduating June 2027), with hands-on experience across Java development, full-stack web development, and data analytics. I have completed multiple internships building real-world applications using core OOP principles, responsive web design, and backend development. I am Microsoft Azure AI certified and hold a Generative AI certification from GeeksforGeeks. I thrive on solving problems with clean, efficient code.</p>
+      <div class="box-container">
+        <div class="box">
+          <p><span>Phone:</span> +91 7668777328</p>
+          <p><span>Location:</span> Saharanpur, India</p>
+        </div>
+        <div class="box">
+          <p><span>Email:</span> ayushmaan.gupta_cs23@gla.ac.in</p>
+          <p><span>GitHub:</span> ayushmaan16</p>
+        </div>
+      </div>
+      <div class="resumebtn">
+        <a href="resume.html" class="btn" target="_blank" rel="noopener noreferrer">
+          <span>Resume</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section class="skills" id="skills">
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills &amp; <span>Abilities</span></h2>
+  <div class="container">
+    <div class="row" id="skillsContainer"></div>
+  </div>
+</section>
+
+<!-- ═══ EDUCATION ═══ -->
+<section class="education" id="education">
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+  <p class="qoute">Education is not preparation for life; education is life itself.</p>
+  <div class="box-container">
+
+    <div class="box">
+      <div class="image">
+        <img draggable="false" src="./assets/images/educat/Eng.jpeg" alt="GLA University">
+      </div>
+      <div class="content">
+        <h3>Bachelor of Technology — Computer Science</h3>
+        <p>GLA University, Mathura</p>
+        <h4><i class="fas fa-calendar-alt"></i> 2023 – June 2027 | Pursuing | CGPA: 6.38</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img draggable="false" src="./assets/images/educat/2020-05-07.jpg" alt="NIOS">
+      </div>
+      <div class="content">
+        <h3>Intermediate (Class XII)</h3>
+        <p>Saharanpur</p>
+        <h4>Completed May 2023 | Percentage: 75.43%</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img draggable="false" src="./assets/images/educat/School.jpg" alt="Infant Jesus School">
+      </div>
+      <div class="content">
+        <h3>High School (Class X)</h3>
+        <p>Saharanpur</p>
+        <h4>Completed May 2021 | Percentage: 70%</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section class="work" id="work">
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  <div class="box-container"></div>
+  <div class="viewall">
+    <a href="./projects" class="btn">
+      <span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section class="experience" id="experience">
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag"><h2>Shadow Fox</h2></div>
+        <div class="desc">
+          <h3><i>Java Development Intern</i></h3>
+          <p>Mar 2025 – Mar 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag"><h2>Elewayte</h2></div>
+        <div class="desc">
+          <h3>Web Development Intern</h3>
+          <p>Mar 2025 – Apr 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag"><h2>CodSoft</h2></div>
+        <div class="desc">
+          <h3>Java Programming Intern</h3>
+          <p>May 2025 – May 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag"><h2>Cognifyz</h2></div>
+        <div class="desc">
+          <h3>Java Development Intern</h3>
+          <p>Jun 2025 – Jul 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag"><h2>The Developers Arena</h2></div>
+        <div class="desc">
+          <h3>Java Developer Intern</h3>
+          <p>Nov 2025 – Jan 2026</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="morebtn">
+    <a href="./experience" class="btn">
+      <span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATES ═══ -->
+<section class="certificates" id="certificates">
+  <h2 class="heading"><i class="fas fa-certificate"></i> Certifi<span>cates</span></h2>
+  <div class="certs-grid">
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+      <h3>Azure AI Fundamentals</h3>
+      <p class="cert-issuer">Microsoft</p>
+      <span class="cert-date">Jun 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-robot"></i></div>
+      <h3>Generative AI &amp; ChatGPT</h3>
+      <p class="cert-issuer">GeeksforGeeks</p>
+      <span class="cert-date">Self-Paced</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-globe"></i></div>
+      <h3>Web Development</h3>
+      <p class="cert-issuer">Elewayte</p>
+      <span class="cert-date">May 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fab fa-hackerrank"></i></div>
+      <h3>Python (Basic)</h3>
+      <p class="cert-issuer">HackerRank</p>
+      <span class="cert-date">Jan 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fab fa-hackerrank"></i></div>
+      <h3>Go (Basic)</h3>
+      <p class="cert-issuer">HackerRank</p>
+      <span class="cert-date">Feb 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fab fa-hackerrank"></i></div>
+      <h3>Software Engineer Role</h3>
+      <p class="cert-issuer">HackerRank</p>
+      <span class="cert-date">May 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-satellite"></i></div>
+      <h3>Remote Sensing &amp; GIS</h3>
+      <p class="cert-issuer">India Space Academy</p>
+      <span class="cert-date">Aug 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-tools"></i></div>
+      <h3>AI Tools &amp; ChatGPT Workshop</h3>
+      <p class="cert-issuer">Be10x</p>
+      <span class="cert-date">Jan 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Cyber Security</h3>
+      <p class="cert-issuer">Learntube</p>
+      <span class="cert-date">Jan 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-university"></i></div>
+      <h3>Management Information System</h3>
+      <p class="cert-issuer">NPTEL</p>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-university"></i></div>
+      <h3>E-Business</h3>
+      <p class="cert-issuer">NPTEL</p>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-leaf"></i></div>
+      <h3>Environmental Engineering &amp; Science</h3>
+      <p class="cert-issuer">NPTEL</p>
+      <span class="cert-date">May 2025</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-code"></i></div>
+      <h3>Python 3 Bootcamp</h3>
+      <p class="cert-issuer">Lernx</p>
+      <span class="cert-date">Jan 2025</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contact">
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="Contact">
+      </div>
+      <form id="contact-form">
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="email" name="email" placeholder="Email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="phone" placeholder="Phone">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+        <div class="button-area">
+          <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Ayushmaan's Portfolio</h3>
+      <p>Thanks for visiting! Connect with me over socials.<br/><br/>Keep Rising 🚀</p>
+    </div>
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+      <a href="#about"><i class="fas fa-chevron-circle-right"></i> About</a>
+      <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Skills</a>
+      <a href="#education"><i class="fas fa-chevron-circle-right"></i> Education</a>
+      <a href="#work"><i class="fas fa-chevron-circle-right"></i> Work</a>
+      <a href="#experience"><i class="fas fa-chevron-circle-right"></i> Experience</a>
+      <a href="#certificates"><i class="fas fa-chevron-circle-right"></i> Certificates</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i>+91 7668777328</p>
+      <p><i class="fas fa-envelope"></i>mr.ayushmaangup@gmail.com</p>
+      <p><i class="fas fa-map-marked-alt"></i>Saharanpur, India</p>
+      <div class="share">
+        <a href="https://www.linkedin.com/in/ayushmaan-gupta" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+        <a href="https://github.com/ayushmaan16" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+        <a href="mailto:mr.ayushmaangup@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

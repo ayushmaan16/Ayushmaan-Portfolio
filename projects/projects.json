@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Heart Disease Prediction",
+    "desc": "Data analytics project using Python, NumPy, Pandas, Matplotlib, Seaborn, and the UCI Cleveland Dataset to predict heart disease. Led the coding and team as Team Leader.",
+    "image": "chatbot",
+    "category": "Data Analytics",
+    "links": {
+      "view": "https://github.com/ayushmaan16",
+      "code": "https://github.com/ayushmaan16"
+    }
+  },
+  {
+    "name": "Cab Booking Portal",
+    "desc": "Full-stack cab booking platform built with React.js, Tailwind CSS, Node.js, Express.js, MongoDB, JWT authentication, and deployed on Windows Server with SSL. Led as Team Leader & Tester.",
+    "image": "wms",
+    "category": "Full Stack",
+    "links": {
+      "view": "https://github.com/ayushmaan16",
+      "code": "https://github.com/ayushmaan16"
+    }
+  },
+  {
+    "name": "Video Conferencing App",
+    "desc": "Real-time video conferencing application with meeting recording & saving features. Built with React, Node.js, Express, LiveKit SDK, Multer, and deployed on Render. Led as Team Leader & Backend Developer.",
+    "image": "quickatted2",
+    "category": "Full Stack",
+    "links": {
+      "view": "https://github.com/ayushmaan16",
+      "code": "https://github.com/ayushmaan16"
+    }
+  }
+]
