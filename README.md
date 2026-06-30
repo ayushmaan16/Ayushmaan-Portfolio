@@ -1,34 +1,52 @@
+# Ayushmaan Gupta — Portfolio Website
 
-# Portfolio Website
-
-Welcome to my personal portfolio website! This project showcases my work, skills, and achievements in web development, machine learning, and more.
+Welcome to my personal portfolio website! This project showcases my work, skills, education, and experience as a Java Developer, Web Developer, and Data Analytics enthusiast.
 
 ## 🌟 Features
-- **Interactive Design**: A responsive, user-friendly interface optimized for all devices.
+
+- **Interactive Design**: A responsive, animated, user-friendly interface optimized for all devices.
 - **Project Showcase**: Detailed descriptions and links to my best projects.
-- **Dynamic Contact Section**: Easily reach out to me via email or social platforms.
-- **Smooth Navigation**: Built with clean code and intuitive structure.
+- **Education & Experience Timeline**: A visual journey through my academic background and internships.
+- **Dynamic Contact Form**: Powered by EmailJS — messages sent through the site land directly in my inbox.
+- **Smooth Navigation**: Built with clean code and an intuitive structure.
 
 ## 🛠️ Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Django (for dynamic content management)
-- **Styling Framework**: Bootstrap
-- **Deployment**: [Platform Used, e.g., GitHub Pages/Heroku/Vercel]
+
+- **Frontend**: HTML, CSS, JavaScript, jQuery
+- **Form Handling**: EmailJS (for contact form submissions)
+- **Icons**: Font Awesome
+- **Deployment**: GitHub Pages
 
 ## 🚀 How to View
-Click [here](https://chetandev999.netlify.app) to explore my portfolio.
 
-## 📂 Project Highlights
-1. **[Health Care Chatbot](https://github.com/Wani-Chetan-999/QuickAttend)**  
-   An AI-powered chatbot built using Python and NLP for instant healthcare advice.
-2. **Quick Attend**  
-   A smart attendance system designed for accuracy and ease of use.
-3. **Other Projects**  
-   More exciting projects are available on my portfolio!
+Click [here](https://your-github-username.github.io/Ayushmaan-Portfolio/) to explore my portfolio.
+
+*(Replace the link above with your live GitHub Pages URL once deployed.)*
+
+## 👨‍🎓 About Me
+
+I'm a Computer Science student at GLA University, Mathura (graduating June 2027), with hands-on experience across Java development, full-stack web development, and data analytics. I've completed multiple internships building real-world applications using core OOP principles, responsive web design, and backend development. I'm Microsoft Azure AI certified and hold a Generative AI certification from GeeksforGeeks.
+
+## 📂 Sections
+
+- **Home** — Introduction and quick overview
+- **Education** — Academic background from High School to B.Tech
+- **Experience** — Internship roles across multiple companies
+- **Projects** — Showcase of my development work
+- **Certificates** — Professional certifications earned
+- **Contact** — Get in touch via the contact form or social links
 
 ## 📬 Contact Me
+
 Feel free to connect with me for collaboration or queries:
-- **Email**: [02ckwani@gmail.com](mailto:02ckwani@gmail.com)
-- **GitHub**: [https://github.com/Wani-Chetan-999/](#)
+
+- **Email**: [mr.ayushmaangup@gmail.com](mailto:mr.ayushmaangup@gmail.com)
+- **Phone**: +91 7668777328
+- **Location**: Saharanpur, India
+- **LinkedIn**: [Connect with me](#)
+- **GitHub**: [https://github.com/your-github-username](#)
+- **LeetCode**: [https://leetcode.com/u/ayushmaan1630/](https://leetcode.com/u/ayushmaan1630/)
 
 ---
+
+⭐ If you like this portfolio, feel free to star the repo!
