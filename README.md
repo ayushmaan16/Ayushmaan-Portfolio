@@ -21,7 +21,6 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 Click [here](https://ayushmaan16.github.io/Ayushmaan-Portfolio/) to explore my portfolio.
 
-*(Replace the link above with your live GitHub Pages URL once deployed.)*
 
 ## 👨‍🎓 About Me
 
